@@ -172,7 +172,7 @@ app.post("/tickets", async (req, res) => {
             await mongoDb.collection("activity_logs").insertOne({
                 action: "ticket_created", 
                 user_id: submitted_by,
-                ticket_id: newticketId,
+                ticket_id: newTicketId,
                 details: `Ticket created: ${title}`,
                 timestamp: new Date()
             });
